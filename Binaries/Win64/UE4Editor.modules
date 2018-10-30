@@ -1,0 +1,8 @@
+{
+	"BuildId": "4212847",
+	"Modules": 
+	{
+		"BotTesting": "UE4Editor-BotTesting.dll",
+		"TestWindowEditor": "UE4Editor-TestWindowEditor.dll"
+	}
+}
