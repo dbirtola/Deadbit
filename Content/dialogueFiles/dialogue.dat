@@ -1,0 +1,30 @@
+{
+				Bot1
+				OnHit
+				test
+				
+}
+{
+				Bot1
+				OnSeen
+				test2
+				
+}
+{
+			Bot1
+			OnSeen
+			Test2
+			
+}
+{
+		Bot2
+		OnSeen
+		Test2
+		
+}
+{
+	Bot1
+	OnSeen
+	Test3
+	cold:yes town:deadbit
+}

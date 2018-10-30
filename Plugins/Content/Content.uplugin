@@ -1,0 +1,11 @@
+{
+   "FileVersion" : 3,
+   "FriendlyName" : "Bob's Content",
+   "Version" : 1,
+   "VersionName": "1.0",
+   "Description" : "Here I describe the content.",
+   "Category" : "Bobs.Content",
+   "CreatedBy" : "Bob Chatman",
+   "CreatedByURL" : "http://gneu.org",
+   "CanContainContent" : "true"
+}
