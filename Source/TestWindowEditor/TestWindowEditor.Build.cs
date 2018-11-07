@@ -10,7 +10,7 @@ public class TestWindowEditor : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameplayTasks", "BotTesting", "UnrealEd" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { "InputCore", "SlateCore", "Slate", "EditorStyle", "PropertyEditor", "LevelEditor", "XmlParser" });
+		PrivateDependencyModuleNames.AddRange(new string[] { "CurveEditor", "InputCore", "SlateCore", "Slate", "EditorStyle", "PropertyEditor", "LevelEditor", "XmlParser" });
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

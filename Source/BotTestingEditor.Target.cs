@@ -15,7 +15,7 @@ public class BotTestingEditorTarget : TargetRules
         ExtraModuleNames.AddRange(
             new string[]
             {
-                "TestWindowEditor"
+                //"TestWindowEditor"
             });
     }
 }
