@@ -11,6 +11,13 @@
 			"AdditionalDependencies": [
 				"Engine",
 				"CoreUObject"
+			],
+			"Name": "TestWindowEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject"
 			]
 		}
 	],
