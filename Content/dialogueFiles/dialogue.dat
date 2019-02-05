@@ -1,0 +1,31 @@
+{
+					Bot1
+					OnSeen
+					test
+					
+}
+{
+				Bot1
+				OnSeen
+				Test4
+				cold:yes
+				
+}
+{
+			Bot1
+			OnSeen
+			Tutorial1
+			step:1
+}
+{
+		Moose
+		Static
+		PunchStepStart
+		step:1
+}
+{
+	Moose
+	Static
+	Tutorial2
+	step:2
+}

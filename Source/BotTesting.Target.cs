@@ -11,13 +11,13 @@ public class BotTestingTarget : TargetRules
 
 		ExtraModuleNames.AddRange( new string[] { "BotTesting" } );
 
-        if (bBuildEditor) //4.16+
-        {
+        //if (bBuildEditor) //4.16+
+        //{
             ExtraModuleNames.AddRange(
                 new string[]
                 {
                     "TestWindowEditor"
                 });
-        }
+       // }
     }
 }
