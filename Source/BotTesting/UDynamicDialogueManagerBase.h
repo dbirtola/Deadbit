@@ -85,14 +85,27 @@ public:
 
 
 				while (entryQueue.Dequeue(thisCrit)) {
-
-					criteria.Add(thisCrit);
+					UE_LOG(LogTemp, Warning, TEXT("Adding new criteria %s"), *thisCrit);
+					if (thisCrit.IsEmpty()) {
+						continue;
+					}
+					criteria.Add(thisCrit);				
+					FString left, right;
+					thisCrit.Split(TEXT(":"), &left, &right);
+					
+					newFact = NewObject<UDDFact>(this);
+					newFact->Initialize(FName(*left), FName(*right));
+					
+					newFacts.Add(newFact);
+					
 
 				}
-				UE_LOG(LogTemp, Warning, TEXT("Adding new rule %s"), *ruleFile);
+				
 
 				newRule->Initialize(newFacts, wav);
 				newRules.Add(newRule);
+
+				UE_LOG(LogTemp, Warning, TEXT("Adding new rule %s"), *newRule->ToString());
 				//AddDialogueEntry(concept, who, criteria);
 
 			}
