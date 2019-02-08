@@ -1,31 +1,72 @@
 {
-					Bot1
-					OnSeen
-					test
-					
-}
-{
-				Bot1
-				OnSeen
-				Test4
-				cold:yes
-				
-}
-{
-			Bot1
-			OnSeen
-			Tutorial1
-			step:1
-}
-{
-		Moose
-		Static
-		PunchStepStart
-		step:1
+	Moose
+	Static
+	StartIntro
+	step:StartIntro
 }
 {
 	Moose
 	Static
-	Tutorial2
-	step:2
+	StartMove
+	step:StartMove
+}
+{
+	Moose
+	Static
+	EndMove
+	step:EndMove
+}
+{
+	Moose
+	Static
+	StartPunch
+	step:StartPunch
+}
+{
+	Moose
+	Static
+	StartPunchRobot
+	step:StartPunchRobot
+}
+{
+	Moose
+	Static
+	EndPunchRobot
+	step:EndPunchRobot
+}
+{
+	Moose
+	Static
+	EndInspect
+	step:EndInspect
+}
+{
+	Moose
+	Static
+	EndTestItOut
+	step:EndTestItOut
+}
+{
+	Moose
+	Static
+	StartFindArm
+	step:StartFindArm
+}
+{
+	Moose
+	Static
+	EndFindArm
+	step:EndFindArm
+}
+{
+	Moose
+	Static
+	StartEquipArm
+	step:EndEquipArm
+}
+{
+	Moose
+	Static
+	StartRobotFight
+	step:EndRobotFight
 }
