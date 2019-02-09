@@ -30,6 +30,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
 	TArray<UDDFact*> GetCriteria() {
 		return requiredCriteria;
+	}	
+	
+	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
+	FString ToString() {
+		FString temp = FString("{");
+		for (int i = 0; i < requiredCriteria.Num(); i++) {
+			temp += requiredCriteria[i]->ToString() + FString(", ");
+		}
+		temp += FString("}, {") + wavKey + FString("}");
+		return temp;
 	}
 
 	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")

@@ -77,10 +77,12 @@ void FTestWindowEditorModule::CreateWindow() {
 	UE_LOG(TestWindowEditor, Warning, TEXT("Clicked"));
 
 	whoOptions = new TArray<TSharedPtr<FString>>;
+	whoOptions->Add(TSharedPtr<FString>(new FString("Moose")));
 	whoOptions->Add(TSharedPtr<FString>(new FString("Bot1")));
 	whoOptions->Add(TSharedPtr<FString>(new FString("Bot2")));
 
 	conceptOptions = new TArray<TSharedPtr<FString>>;
+	conceptOptions->Add(TSharedPtr<FString>(new FString("Static")));
 	conceptOptions->Add(TSharedPtr<FString>(new FString("OnSeen")));
 	conceptOptions->Add(TSharedPtr<FString>(new FString("OnHit")));	
 

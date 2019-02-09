@@ -37,6 +37,11 @@ public:
 		return value;
 	}
 
+	UFUNCTION(BlueprintCallable, Category = "Dyanmic Dialogue")
+	FString ToString() {
+		return key.ToString() + FString(": ") + value.ToString();
+	}
+
 	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
 	bool Compare(UDDFact* f2);
 
