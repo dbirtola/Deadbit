@@ -13,7 +13,7 @@ public class TestWindowEditor : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] { "CurveEditor", "InputCore", "SlateCore", "Slate", "EditorStyle", "PropertyEditor", "LevelEditor", "XmlParser" });
 
 		// Uncomment if you are using Slate UI
-		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+		//PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		
 		// Uncomment if you are using online features
 		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
