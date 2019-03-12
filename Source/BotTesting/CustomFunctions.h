@@ -15,6 +15,8 @@ class BOTTESTING_API UCustomFunctions : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 private:
 public:
+	/*
 	UFUNCTION(BlueprintCallable, Category = "Function")
 		void CallState(char functionName[], AActor Player);
+	*/
 };
