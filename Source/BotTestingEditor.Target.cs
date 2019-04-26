@@ -12,10 +12,12 @@ public class BotTestingEditorTarget : TargetRules
 		ExtraModuleNames.AddRange( new string[] { "BotTesting" } );
 
         // Game editor
+        /*
         ExtraModuleNames.AddRange(
             new string[]
             {
                 "TestWindowEditor"
             });
+        */
     }
 }
