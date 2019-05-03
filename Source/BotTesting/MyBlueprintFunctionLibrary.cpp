@@ -10,6 +10,48 @@
 #include "GameFramework/Actor.h"
 #include "Engine.h"
 
+
+
+void UMyBlueprintFunctionLibrary::SaveRules(FString filename, UPARAM(ref) TArray<UUDDRule*>& InRules) {
+	FString ruleFile = FPaths::GameContentDir() + "dialogueFiles/dialogue.dat";
+
+	//UE_LOG(None, Warning, TEXT("Saving file: %s"), *ruleFile);
+
+	TArray<FString> textEntries;
+
+	for (int i = 0; i < InRules.Num(); i++) {
+
+		UUDDRule* rule = InRules[i];
+
+		/*
+		textEntries.Add("\t" + de.who);
+		textEntries.Add("\t" + de.concept);
+		textEntries.Add("\t" + de.wav);
+		*/
+		textEntries.Add("{");
+
+		textEntries.Add("\t" + rule->GetCriteria()[0]->GetValue().ToString());
+
+		textEntries.Add("\t" + rule->GetCriteria()[1]->GetValue().ToString());
+
+		textEntries.Add("\t" + rule->GetWavKey());
+
+		for (int i = 3; i < rule->GetCriteria().Num(); i++) {
+			textEntries.Add("\t" + rule->GetCriteria()[i]->ToString());
+		}
+
+
+		textEntries.Add("}");
+	}
+
+	FFileHelper::SaveStringArrayToFile(textEntries, *ruleFile);
+
+
+}
+
+
+
+
 void UMyBlueprintFunctionLibrary::ParseRules(UObject* Outer, FString filename, TArray<UUDDRule*>& OutRules)
 {
 	TArray<FString> inFile;
@@ -53,6 +95,7 @@ void UMyBlueprintFunctionLibrary::ParseRules(UObject* Outer, FString filename, T
 			UUDDRule* newRule = NewObject<UUDDRule>();
 
 			TArray<UDDFact*> newFacts;
+
 			UDDFact* newFact = NewObject<UDDFact>(Outer);
 			newFact->Initialize(FName("who"), FName(*who));
 			newFacts.Add(newFact);

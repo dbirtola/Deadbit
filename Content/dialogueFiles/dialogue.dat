@@ -1,72 +1,15 @@
 {
 	Moose
 	Static
-	StartIntro
-	step:StartIntro
+	test
 }
 {
 	Moose
 	Static
-	StartMove
-	step:StartMove
+	test2
 }
 {
 	Moose
 	Static
-	EndMove
-	step:EndMove
-}
-{
-	Moose
-	Static
-	StartPunch
-	step:StartPunch
-}
-{
-	Moose
-	Static
-	StartPunchRobot
-	step:StartPunchRobot
-}
-{
-	Moose
-	Static
-	EndPunchRobot
-	step:EndPunchRobot
-}
-{
-	Moose
-	Static
-	EndInspect
-	step:EndInspect
-}
-{
-	Moose
-	Static
-	EndTestItOut
-	step:EndTestItOut
-}
-{
-	Moose
-	Static
-	StartFindArm
-	step:StartFindArm
-}
-{
-	Moose
-	Static
-	EndFindArm
-	step:EndFindArm
-}
-{
-	Moose
-	Static
-	StartEquipArm
-	step:EndEquipArm
-}
-{
-	Moose
-	Static
-	StartRobotFight
-	step:EndRobotFight
+	test3
 }
