@@ -20,14 +20,8 @@ class BOTTESTING_API ACB_PlayerControllerBase : public APlayerController
 
 
 
-	UPROPERTY()
-	UObject LevelData;
-	UObject CharacterData;
-	UObject PlayerControllerData;
-
 
 public:
-	UFUNCTION()
 
 		
 };

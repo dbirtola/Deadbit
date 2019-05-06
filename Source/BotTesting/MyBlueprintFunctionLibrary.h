@@ -16,4 +16,7 @@ class BOTTESTING_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLibr
 
 	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
 	static void ParseRules(UObject* Outer, FString filename, TArray<UUDDRule*>& OutRules);
+
+	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
+	static void SaveRules(FString filename, UPARAM(ref) TArray<UUDDRule*>& InRules);
 };
