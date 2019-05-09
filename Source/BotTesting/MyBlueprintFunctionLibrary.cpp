@@ -49,8 +49,19 @@ void UMyBlueprintFunctionLibrary::SaveRules(FString filename, UPARAM(ref) TArray
 
 }
 
+void UMyBlueprintFunctionLibrary::SaveStringsToFile(UPARAM(ref) TArray<FString>& strings, FString fileName) {
+	FString file = FPaths::GameContentDir() + "miscfiles/" + fileName;
+	FFileHelper::SaveStringArrayToFile(strings, *file);
+}
 
+void UMyBlueprintFunctionLibrary::LoadStringsFromFile(TArray<FString>& strings, FString fileName) {
+	FString file = FPaths::GameContentDir() + "miscFiles/" + fileName;
 
+	if (!FFileHelper::LoadANSITextFileToStrings(*file, &IFileManager::Get(), strings)) {
+		UE_LOG(LogTemp, Warning, TEXT("Unable to succesfully load rule file: %s"), *file);
+		return;
+	}
+}
 
 void UMyBlueprintFunctionLibrary::ParseRules(UObject* Outer, FString filename, TArray<UUDDRule*>& OutRules)
 {
