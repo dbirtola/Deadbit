@@ -11,6 +11,9 @@
 #include "Engine.h"
 
 
+int UMyBlueprintFunctionLibrary::GetActorUniqueID(AActor* Actor) {
+	return (int)Actor->GetUniqueID();
+}
 
 void UMyBlueprintFunctionLibrary::SaveRules(FString filename, UPARAM(ref) TArray<UUDDRule*>& InRules) {
 	FString ruleFile = FPaths::GameContentDir() + "dialogueFiles/dialogue.dat";
