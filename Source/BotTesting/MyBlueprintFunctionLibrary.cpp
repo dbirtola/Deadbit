@@ -3,7 +3,6 @@
 
 #include "MyBlueprintFunctionLibrary.h"
 #include "Runtime/Core/Public/Misc/FileHelper.h"
-#include "TestWindowEditor/TestWindowEditor.h"
 #include "BotTesting/UDDRule.h"
 #include "BotTesting/UDDFact.h"
 #include "CoreMinimal.h"
