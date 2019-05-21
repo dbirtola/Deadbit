@@ -1,11 +1,6 @@
 {
 	Moose
 	Static
-	test
-}
-{
-	Moose
-	Static
 	Opening
 	step:Opening
 }
