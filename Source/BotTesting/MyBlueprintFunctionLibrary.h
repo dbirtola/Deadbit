@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "MyBlueprintFunctionLibrary.generated.h"
 
@@ -26,4 +27,7 @@ class BOTTESTING_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLibr
 	UFUNCTION(BlueprintCallable, Category = "File Management")
 	static void LoadStringsFromFile(TArray<FString>& strings, FString fileName);
 
+
+	UFUNCTION(BlueprintCallable, Category = "Helper")
+	static int GetActorUniqueID(AActor* Actor);
 };
