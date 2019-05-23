@@ -44,6 +44,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
 	int GetMatchValue(const TArray<UDDFact*>& facts) {
+		if (facts.Num() < 1) {
+			return -1;
+		}
+		if (requiredCriteria.Num() < 1) {
+			return -1;
+		}
 
 		int points = 0;
 

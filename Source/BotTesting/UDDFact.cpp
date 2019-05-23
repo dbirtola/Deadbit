@@ -24,14 +24,16 @@ UDDFact::~UDDFact()
 bool UDDFact::Compare(UDDFact* f2) {
 
 	//FString str = FString::Printf(TEXT("Comparing %llu , %llu  to   %llu , %llu"), &key, &value, &f2->key, &f2->value);
-
+	if (f2 == nullptr) {
+		return false;
+	}
 
 	if (!key.IsEqual(f2->GetKey()) || !value.IsEqual(f2->GetValue()) )
 	{
-		UE_LOG(LogTemp, Warning, TEXT("[FAIL] Comparing { %s, %s }, to { %s, %s }"), *key.ToString(), *value.ToString(), *f2->GetKey().ToString(), *f2->GetValue().ToString())
+		//UE_LOG(LogTemp, Warning, TEXT("[FAIL] Comparing { %s, %s }, to { %s, %s }"), *key.ToString(), *value.ToString(), *f2->GetKey().ToString(), *f2->GetValue().ToString())
 		return false;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("[PASS] Comparing { %s, %s }, to { %s, %s }"), *key.ToString(), *value.ToString(), *f2->GetKey().ToString(), *f2->GetValue().ToString())
+	//UE_LOG(LogTemp, Warning, TEXT("[PASS] Comparing { %s, %s }, to { %s, %s }"), *key.ToString(), *value.ToString(), *f2->GetKey().ToString(), *f2->GetValue().ToString())
 	return true;
 }
 
