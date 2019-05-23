@@ -1,15 +1,35 @@
 {
 	Moose
 	Static
-	test
+	Opening
+	step:Opening
 }
 {
 	Moose
 	Static
-	test2
+	PunchGrate
+	step:PunchGrate
 }
 {
 	Moose
 	Static
-	test3
+	MakeFollow
+	step:MakeFollow
+}
+{
+	Moose
+	Static
+	LookAtHer
+	step:LookAtHer
+}
+{
+	Moose
+	Static
+	EquipPart
+	step:EquipPart
+{
+	Moose
+	Static
+	ThatIfChip
+	step:ThatIfChip
 }

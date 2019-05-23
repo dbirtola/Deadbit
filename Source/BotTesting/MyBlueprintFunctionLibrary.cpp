@@ -3,7 +3,6 @@
 
 #include "MyBlueprintFunctionLibrary.h"
 #include "Runtime/Core/Public/Misc/FileHelper.h"
-#include "TestWindowEditor/TestWindowEditor.h"
 #include "BotTesting/UDDRule.h"
 #include "BotTesting/UDDFact.h"
 #include "CoreMinimal.h"
@@ -11,6 +10,9 @@
 #include "Engine.h"
 
 
+int UMyBlueprintFunctionLibrary::GetActorUniqueID(AActor* Actor) {
+	return (int)Actor->GetUniqueID();
+}
 
 void UMyBlueprintFunctionLibrary::SaveRules(FString filename, UPARAM(ref) TArray<UUDDRule*>& InRules) {
 	FString ruleFile = FPaths::GameContentDir() + "dialogueFiles/dialogue.dat";
@@ -49,8 +51,19 @@ void UMyBlueprintFunctionLibrary::SaveRules(FString filename, UPARAM(ref) TArray
 
 }
 
+void UMyBlueprintFunctionLibrary::SaveStringsToFile(UPARAM(ref) TArray<FString>& strings, FString fileName) {
+	FString file = FPaths::GameContentDir() + "miscfiles/" + fileName;
+	FFileHelper::SaveStringArrayToFile(strings, *file);
+}
 
+void UMyBlueprintFunctionLibrary::LoadStringsFromFile(TArray<FString>& strings, FString fileName) {
+	FString file = FPaths::GameContentDir() + "miscFiles/" + fileName;
 
+	if (!FFileHelper::LoadANSITextFileToStrings(*file, &IFileManager::Get(), strings)) {
+		UE_LOG(LogTemp, Warning, TEXT("Unable to succesfully load rule file: %s"), *file);
+		return;
+	}
+}
 
 void UMyBlueprintFunctionLibrary::ParseRules(UObject* Outer, FString filename, TArray<UUDDRule*>& OutRules)
 {

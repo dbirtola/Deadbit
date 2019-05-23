@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "MyBlueprintFunctionLibrary.generated.h"
 
@@ -19,4 +20,14 @@ class BOTTESTING_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLibr
 
 	UFUNCTION(BlueprintCallable, Category = "Dynamic Dialogue")
 	static void SaveRules(FString filename, UPARAM(ref) TArray<UUDDRule*>& InRules);
+
+	UFUNCTION(BlueprintCallable, Category = "File Management")
+	static void SaveStringsToFile(UPARAM(ref) TArray<FString>& strings, FString fileName);
+
+	UFUNCTION(BlueprintCallable, Category = "File Management")
+	static void LoadStringsFromFile(TArray<FString>& strings, FString fileName);
+
+
+	UFUNCTION(BlueprintCallable, Category = "Helper")
+	static int GetActorUniqueID(AActor* Actor);
 };
